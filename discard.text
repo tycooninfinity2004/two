@@ -1,0 +1,318 @@
+
+
+
+
+
+
+<!-- <script>
+    function view() {
+        show.style.display="block";
+    }
+    
+</script> 
+ -->
+
+
+
+<!--<label for="network">Select Network:</label>
+    <select id="network" name="network"required>
+      <option value="">Select Network</option> 
+      <option value="GLO">MTN</option>
+      <option value="AIRTEL">GLO</option>
+      <option value="MTN">AIRTEL</option>
+      <option value="9MOBILE">9MOBILE</option>
+    </select><br> -->
+
+<!--https://bit.ly/tiychat  -->
+
+
+
+
+  <!-- <div id="input-container">
+      <p id="decline"></p>
+    <input type="text" id="number-input" placeholder="Enter Free mode port">
+    <button id="submit-btn">Connect</button>
+    
+    <p style="position: absolute;top:60%;font-family:monospace;font-size:14px;"onclick="clickhere()">I need free mode port?   Click here</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<script>
+
+
+// Define the specified numbers and their corresponding durations
+const specifiedNumbers = {
+  "1234,2345,3456,4567,5678,6789,7890": 10,
+  "0987,9876,8765,7654,6543,5432,4321": 15,
+  "12,34,56,78,90": 20,
+  "1029,2039,3049,4059,5976": 25,
+  "2000,7367,98,655,433,677": 30,
+  "83903258,846,9666,899355,654": 35
+};
+
+// Retrieve used numbers and their timestamps from the local storage or initialize an empty object
+let usedNumbers = JSON.parse(localStorage.getItem('usedNumbers')) || {};
+
+// Get the input and button elements
+const input = document.getElementById('number-input');
+const submitBtn = document.getElementById('submit-btn');
+const go = document.getElementById("input-container");
+
+// Function to remove a specified number from the input field and button
+function removeSpecifiedNumber(number) {
+  input.value = '';
+  input.style.display = 'none'; // Hide the input field
+  submitBtn.style.display = 'none'; // Hide the submit button
+  go.style.display="none";
+  const currentTime = new Date().getTime();
+  localStorage.setItem('hiddenState', JSON.stringify({ 
+    number, 
+    hideTime: currentTime, 
+    displayAfter: currentTime + specifiedNumbers[number] * 1000 
+  }));
+  setTimeout(() => {
+    input.style.display = 'block'; // Display the input field after the duration
+    submitBtn.style.display = 'block'; // Display the submit button after the duration
+    go.style.display="block";
+    input.value = '';
+  }, specifiedNumbers[number] * 1000);
+}
+
+
+
+
+
+// Event listener for the submit button
+submitBtn.addEventListener('click', function() {
+  const enteredNumber = input.value.trim();
+
+  // Check if the entered number has already been used
+  if (usedNumbers[enteredNumber]) {
+    document.getElementById("decline").innerHTML="This port as been used!";
+    return;
+  }
+
+  let matchingNumberFound = false;
+
+  // Check if the entered number matches any of the specified numbers
+  for (let numbers in specifiedNumbers) {
+    const numberArr = numbers.split(',');
+    if (numberArr.includes(enteredNumber)) {
+      removeSpecifiedNumber(numbers);
+      matchingNumberFound = true;
+
+      // Store the entered number as used along with the timestamp in local storage
+      usedNumbers[enteredNumber] = new Date().getTime() + specifiedNumbers[numbers] * 1000;
+      localStorage.setItem('usedNumbers', JSON.stringify(usedNumbers));
+    }
+  }
+
+  // Display an alert if no matching number is found
+  if (!matchingNumberFound) {
+    document.getElementById("decline").innerHTML="Please enter a valid free mode port number!";
+  }
+});
+
+
+// Check if a specific number was used on page load and set the input and button state accordingly
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlEnteredNumber = urlParams.get('enteredNumber');
+  if (usedNumbers[urlEnteredNumber] && usedNumbers[urlEnteredNumber] > new Date().getTime()) {
+    input.style.display = 'none'; // Hide the input field
+    submitBtn.style.display = 'none'; // Hide the submit button
+    const storedState = JSON.parse(localStorage.getItem('hiddenState'));
+    if(storedState && storedState.number === urlEnteredNumber
+       && storedState.displayAfter > new Date().getTime()) {
+      input.style.display = 'none'; // Hide the input field
+      submitBtn.style.display = 'none'; // Hide the submit button
+      setTimeout(() => {
+        input.style.display = 'block'; // Display the input field after the duration
+        submitBtn.style.display = 'block'; // Display the submit button after the duration
+      }, (storedState.displayAfter - new Date().getTime()) / 1000);
+    }
+  }
+};
+ 
+    
+</script>
+
+ -->
+
+
+
+
+
+<!-- document.getElementById('freemode').addEventListener('click', function() {
+  setTimeout(function() {
+    document.getElementById('wait').innerText = 'Hello World';
+    setTimeout(function() {
+      document.getElementById('wait').innerText = 'How are you';
+      setTimeout(function() {
+        document.getElementById('wait').innerText = 'Are you good';
+        setTimeout(function() {
+          document.getElementById('wait').innerText = 'How are you doing';
+          setTimeout(function() {
+            window.location.href = "https://google.com";
+          }, 8000);
+        }, 6000);
+      }, 4000);
+    }, 2000);
+  }, 100);
+});
+ -->
+
+
+
+<!-- #header {
+    position:fixed;
+    bottom:0%;
+    width:100%;
+    height:7%;
+    background:green;
+    left:0%;
+}
+#home {
+    position:fixed;
+    left:10%;
+    font-size:25px;
+    bottom:1%;
+}
+#message {
+    position:fixed;
+    left:45%;
+    bottom:1%;
+    font-size:25px;
+    
+}
+#payment {
+    position:fixed;
+    left:80%;
+    bottom:1%;
+    font-size:25px;
+}
+
+
+.video-carousel {
+  width: 100%;
+ 
+  overflow-y: scroll;
+  white-space: normal;
+}
+
+.video-container {
+  display: inline-block;
+  width: 320px; /* Set width of each video container */
+  margin-right: 2px; /* Set margin between video containers */
+  margin-top: 0px;
+}
+
+.video-container iframe {
+  width: 100%;
+  
+}
+
+
+
+header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height:5.5%;
+  font-family:monospace;
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+  white-space: nowrap;
+}
+
+.chat-message {
+  margin-left:10%;
+  font-family:monospace;
+  animation: slideIn 5s forwards;
+}
+-
+@keyframes slideIn {
+  to {
+    left: 0%;
+  }
+}
+
+.chat-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right:10%;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+    #decline {
+        color:red;
+        margin-bottom:15%;
+        font-weight:bold;
+        font-family:monospace;
+    }
+#input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width:100%;
+  background:#ffffff;
+}
+
+#number-input {
+  margin-bottom: 10px;
+  border:none;
+  outline:none;
+  width:70%;
+  border-bottom:2px solid #000000;
+  padding:5%;
+  
+}
+
+#submit-btn {
+    background:#ffc700;
+    width:70%;
+    color:white;
+    font-family:monospace;
+    padding:3%;
+    outline:none;
+    border:none;
+}
+
+
+ -->
+
+
+
+
+
+<!--https://www.whynopadlock.com/ -->
+
+<!-- Twyse
+joetycoon2004 -->

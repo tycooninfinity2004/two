@@ -1,0 +1,464 @@
+
+#divbottom {
+    background:white;width:100%;height:15%; position:fixed;left:0%; bottom:0%;display:none;
+}
+
+#overlay {
+  position:fixed;right:20%; bottom:45%;font-family:monospace;color:grey;font-size:15px;
+}
+
+
+#freemode {
+    position:fixed;left:20%; bottom:45%;font-family:monospace;color:grey;font-size:15px;
+}
+
+#multiply-text {
+  position:fixed;left:8%;top:8%;color:orange;font-weight:bold;font-family:Tahoma;font-size:16px;
+}
+#Bookticket {
+    position: absolute;bottom:0%;font-family:monospace;font-size:13px;left:0%; background:#ffc700;width:30%;height:6%; border-radius:2px; border: none;outline:none;color:white;
+}
+#meta {
+    margin-top:60%; width:20%;height:10%;
+}
+
+
+
+    #decline {
+    text-align:center;
+    flex-direction:column;
+        color:red;                        
+        position:fixed;
+        top:0%;
+        right:2%;
+        font-weight:bold;
+        font-family:monospace;
+    }
+#input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position:fixed;
+  top:0%;
+  height: 6%;
+  width:100%;
+  background:#ffffff;
+}
+
+#number-input {
+position:fixed;
+  top: 0%;
+  border:none;
+  outline:none;
+  width:30%;
+  left:0%;
+  height:0%;
+  border-bottom:2px solid #000000;
+  
+  
+}
+
+#submit-btn {
+    background:#ffc700;
+    width:25%;
+    color:white;
+    font-family:monospace;
+    height:4%;
+    outline:none;
+    position:fixed;
+    top:1%;
+    right:33%;
+    border:none;
+}
+
+
+      body {
+          color:white;
+      }
+      #widebox {
+          width:100%;
+          height:5%;
+          top:0%;
+          position: fixed;
+          background:white;
+      }
+    #increaseBtn {
+      width:30%;
+      height:5%;
+      left:35%;
+      outline:none;
+      border:none;
+      background:#0085e2;
+      color:white;
+      font-family:monospace;
+      font-size: 15px;
+      position:fixed;
+      top:0%;
+      border-radius:2px;
+      display:none;
+    }
+  
+  
+  
+  
+
+
+
+
+
+
+#progress-bar-container {
+  width: 100%;
+  height: 0%;
+  border: 1px solid #000;
+ position:fixed;
+ top:0%;
+ background:white;
+ left:0%;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 2%;
+  position:fixed;
+  top:5%;
+  background-color: #0f0;
+}
+
+#redirectbutton {
+  margin-top: 20px;
+}
+
+#pls {
+  position:fixed;
+  left:15%;
+  font-size:13px;
+  font-family:monospace;
+  top:5%;
+  color:#0085e2;
+  font-weight:bold;
+}
+
+
+
+
+
+#layer {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: black;
+    color:black;
+    top:0%;
+    left:0%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.popup .covercap {
+    
+    margin-top:50%;
+    margin-left:15%;
+    width:70%;
+    height:25%;
+    background:whitesmoke;
+}
+
+a {
+    text-decoration:none;
+}
+
+
+
+
+    h3 {
+        front-size:15px;
+        font-family:monospace;
+    
+    }
+    #login {
+        padding:20px;
+        margin:50px;
+        outline:none;
+        border:none;
+        background:orange;
+    }
+    input {
+        width:80%;
+     font-family:monospace;;
+        padding:8px;
+        outline:none;
+        border:none;
+        margin:10px;
+    }
+    #button {
+        background:green;
+        color: White;
+        font-family:monospace;
+        outline:none;
+        border:none;
+        width:80%;
+        height:30px;
+        margin:20px;
+        justify-content:center;
+        align-items:center;
+    }
+.form-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.loginform-container {
+  width: 100%;
+  height:100%;
+  left:0%;
+  position:fixed;
+  top:0%;
+  background: white;
+  border-radius: 0px;
+  text-align: center;  
+}
+#error {
+    font-family:monospace;
+    color: red;
+    font-weight:bold;
+    font-size:15px;
+}
+
+#correct {
+    font-family:monospace;
+    color:#001781;
+    font-weight:bold;
+    font-size:12px;
+}
+a {
+    text-decoration:none;
+}
+#correctbtn  {
+    font-family:monospace;
+    color:white;
+    background: orange;
+    width:50%;
+    height:20px;
+    outline:none;
+    border: none;
+    font-size:12.5px;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background:black;
+}
+
+.loading-bar {
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: moveupdown  3.10s infinite;
+}
+.small {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: moveUpDown 3.20s infinite;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: moveUpDown 3.25s infinite;
+}
+
+.little {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: moveUpDown 3.30s infinite;
+}
+.yen {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin:0 5px;
+    animation:moveUpDown 3.35s infinite;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: orange;
+}
+.red {
+    background:red;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes moveupdown {
+  0% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+  margin: 0;
+}
+
+.loading-container {
+  text-align: center;
+  position: fixed;
+  background:black;
+  width:100%;
+  height:100%;
+  color:white;
+  align-items:center;  
+}
+
+
+.relation {
+    margin-top:60%;
+    tex-align:center;
+    justify-item:center;
+    align-items:center;
+}
+.loading-animation {
+  width: 70px;
+  height: 70px;
+  border: 8px solid #000000;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.percentage {
+  font-size: 24px;
+  font-weight: bold;
+  font-family:Thaoma;
+}
+
+.loading-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #888;
+  font-family:Monaco;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#wait {
+    color:white;text-align:center;margin-top:40%;font-family:monospace;font-size:15px;
+}
+
+
+      body {
+          color:white;
+      }
+      #earn {
+          font-size:30px;
+          font-family:monospace;
+          text-align:center;
+          margin-bottom:20%;
+          
+      }
+    #loadingBar {
+      width: 0%;
+      height: 2%;
+      background-color: blue;
+      position: absolute;
+      top: 0%;
+      transition: width 1s;
+    }
+
+    #withdrawForm {
+    position: absolute;
+    top:2%;
+    width:100%;
+    height:100%;
+    background:none;
+    color:black;
+    text-align:center;
+      display: none;
+    }
+    #withdrawBtn {
+        background:red;
+        color:white;
+        font-family:monaco;
+        font-size: 20px;
+        outline:none;
+        border:none;
+        width:50%;
+        border-radius: 10px;
+        height:6%;
+       position: absolute;
+       bottom:30%;
+       right:25%;
+    }
+  
+
