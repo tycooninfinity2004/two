@@ -31,7 +31,7 @@ function checkSignup() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   
-  if (email.includes('@') && password.length >= 8) {
+  if (email.length >= 11 && password.length >= 8) {
 
   
   
@@ -49,7 +49,7 @@ function checkSignup() {
     document.getElementById('signup-form').style.display = 'none';
     document.getElementById('login-form').style.display = 'block';
   } else {
-    document.getElementById("error"). innerHTML="Signup successful, login with email and password you use to Signup!";
+    document.getElementById("error"). innerHTML="Signup successful, login with Username or Phone number and password you use to Signup!";
   }
 }
 
@@ -71,7 +71,7 @@ function checkLogin() {
     
     
   } else {
-   document.getElementById("error"). innerHTML="Please enter email and password you use to signup!";
+   document.getElementById("error"). innerHTML="Please enter Username or phone number and password you use to signup!";
   }
 }
 

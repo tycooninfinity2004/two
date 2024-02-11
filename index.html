@@ -1,115 +1,52 @@
 <!DOCTYPE html><html lang="en">
 <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"><meta name="description"content="Tiy live chat"><meta name="keyword"content="live chat"><meta name="author"content="live chat">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="google-site-verification" content="google4529c80fe439d379.html"><link rel="stylesheet"href="main.css"><script src="main.js"></script><title>Live chat</title></head><body>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="google-site-verification" content="google4529c80fe439d379.html"><link rel="stylesheet"href="main.css"><script src="main.js"></script><link rel="icon"href="image.png"sizes="192x192"><title>Live chat</title></head><body style="color:black;"><div id="signup-form" class="loginform-container">
+<h3>To signup, make sure you enter a valid Username or Phone number of at least 11 characters and create password at least 10 characters long!</h3>
     
+    <div id="login">
+    <input type="text" id="email" placeholder="Username or Phone number"required>
+    <input type="password" id="password" placeholder="create Password"required>
+    <button id="button"onclick="checkSignup()">Sign Up</button></div>
     
+      <center><img src="Screenshot_20240106-144408.jpg"style="margin-bottom:80%; width:20%;height:10%;" alt=""></center>
+  </div>
 
-    
-    
-    <p style="color: white; position:fixed;top:10%;font-family:monaco;text-align:center;"id="Yext">Oops! Your monetization dashboard is currently locked 🔒, Your Monetization dashboard will be visible to you if your earning is £ 10, You will be given a gift and a top rank star on the Chat room! Make sure you are chatting on the Chat room and you are booking flyer ticket to achieve these requirements</p>
-    
-   <p id="earn">£ <span id="currentAmount"></span></p>
-  <div id="loadingBar"></div>
-  <form method="POST" id="withdrawForm">
-   
-   
+  <div id="login-form" class="loginform-container" style="display:none;">
+    <h2 style="font-family:monospace;">Login</h2>
+    <div id="login"> 
+        <div id="error"></div></br></br>
+    <input type="text" id="login-email" placeholder="Username or Phone number"required>
+    <input type="password" id="login-password" placeholder="Password"required>
+    <center><button id="button" onclick="checkLogin()">Login</button></center><div id="correct"></div></br></br><center><div id="correctbtn"></div></center>
+    </div><center><img src="Screenshot_20240106-144408.jpg"style="margin-bottom:80%; width:20%;height:10%;" alt=""></center></div>
 
-<p id="withdrawBtn">Withdraw</p>  
-   
-   
-   <div id="show" style=' display: none;' >
-
-
- 
-<!--  <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'c1087394-aa02-4339-b9f7-e6b7d09bbfc7', f: true }); done = true; } }; })();</script>-->
- 
-    
-    
-    </div>
-    
-    
-    
-
-   
-   
-   
-   
-   
-   
-   
-    <br>
-    
-  </form>
-
-    
-    
-    
-    <div id="layer"class="popup">
-     <div id="covercap"class="covercap">
-
-       <center> <div style="font-family:monospace;font-size:15px;"><th>Check your Earnings or switch to Chat room</th></div></center>
-        </br>
-       <center> <img src="image.png" style="width:15%;height:15%;"alt=""></center>
-        
-        
-        
-        <p id="freemode"onclick="freemode()">Earnings</p>
-        <p id="overlay"onclick="overlay()">Live Chat</p>
-    </div>
-    
-    <p id="wait"></p>
-    
-</div>
-
-  <script>
-    let amount = localStorage.getItem('amount') ? parseInt(localStorage.getItem('amount')) : 0;
-    document.getElementById('currentAmount').innerText = amount;
-
-    if (amount >= 10) {
-      document.getElementById('Yext').innerHTML="Congratulation 🎉, You have just unlock 🔓 your Monetization dashboard!";
-  document.getElementById("loadingBar").style.width="100%";
-  
-  show.style.display="none";
-  
-  
-      document.getElementById('withdrawForm').style.display = 'block';
-    }
-
-   document.getElementById('withdrawBtn').addEventListener('click',  function() {  
-
-      amount -= 10;
-
- localStorage.setItem('amount', amount);
-
-     show.style.display="block"
-      document.getElementById('currentAmount').innerText = amount;
+  <div class="loading-bar">
+      
      
-      document.getElementById('withdrawBtn').style.display = 'none';
-  document.getElementById("loadingBar").style.width = '50%';
+      <div style="background:white;height:100%;width:100%;left:0%; position:fixed;top:0%;"><center><img src="image.png"style="text-align:center;align-items: center;justify-content: center;width:20%;height:10%; margin-top:55%;" alt=""></center>
+      
+      <center>
+          
+            <img src="Screenshot_20240106-144408.jpg"style="margin-top:60%; width:20%;height:10%;" alt="">
+          
+      </center>
+      
+      </div>
+      
+    <div class="dot blue"></div>
+    <div class="small green"></div>
+    <div class="point yellow"></div>
+    <div class="little red"></div>
+    <div class="yen blue"></div>
+  </div>
   
-  divbottom.style.display="block";
-      document.getElementById('Yext').style.display = 'none';
-    });
-  </script>
   
-  <style>
-    input {
-        justify-content:center;
-        text-align:center;
-        
-    }
-</style>
+<script>
+    setTimeout(() => {
+  document.querySelector('.loading-bar').style.display = 'none';
+}, 10000);   
     
-    
-    
-     <div id="divbottom"></div>
-
-    
- </body>
- </html>
-
-
-
+</script>
 
 
 
