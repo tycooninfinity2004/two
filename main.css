@@ -181,11 +181,7 @@ a {
         margin:50px;
         outline:none;
         border:none;
-        background:whitesmoke;
-        width:70%;
-        height:50%;
-        right:5%;
-        position:relative;
+        background:orange;
     }
     input {
         width:80%;
@@ -242,7 +238,7 @@ a {
 a {
     text-decoration:none;
 }
-/* #correctbtn  {
+#correctbtn  {
     font-family:monospace;
     color:white;
     background: orange;
@@ -255,7 +251,7 @@ a {
     align-items:center;
     text-decoration:none;
 }
- */
+
 
 
 
